@@ -1,0 +1,139 @@
+<!DOCTYPE html>     
+<html>
+<head>
+    <!--CHAACTER SET -->
+    <meta charset="urf-8">
+    <!--TITLE OF THE PAGE-->
+    <title>Contact us</title>
+    <!--INTERNAL CSS -->
+    <style>
+    * {
+        margin: 0px;
+    }
+    .bgimage {
+        background-image: url('../images/bgcontact.jpg');
+        width:100%;
+        margin-top: -100px;
+        height:800px;
+    }
+    .tables tr th a {
+        color: rgb(218, 213, 210);
+        font-size: 18px;
+         text-decoration: none;
+    }
+    .tables tr th a:hover {
+        color: rgb(133, 128, 128);
+    }
+    .introduction {
+        background-color:rgb(201, 175, 175); 
+        width:100%; 
+        height:300px;
+    }
+    .heading {
+        padding: 20px 0px 0px 20px;
+    }
+ 
+.paragraphs {
+     font-size: 30px;
+     font-family: serif;
+     color: rgb(215, 248, 248);
+     padding: 20px 0px 30px 350px;
+
+}
+.submit:hover {
+    background-color: rgb(110, 131, 151);
+    color:rgb(89, 139, 158);
+}
+
+
+
+
+     </style>
+<!--EXTERNAL  javascript and css -->
+     <link rel="stylesheet" href="../css/style.css">
+     <script src="../javascript/external.js"></script>
+
+  
+<!--Navigation bar -->
+<body>
+    <div style="width:80%; height:150px;">
+        <header style="width:100%;  height:150px;" >
+         <nav class="navbar">
+             <table class="tables">
+                <tr>
+                <th >
+                    <a  href="../index.html">Home</a>
+                </th>
+                <th >
+                    <a href="protfolio.html">Protfolio</a>
+                </th>
+                <th >
+                    <a href="blogs.html">Blogs</a>
+                </th>
+                <th >
+                    <a href="research.html">Research</a>
+                </th>
+                <th >
+                    <a href="contactus.html">Contact us</a>
+                </th>
+                </tr>
+             </table>
+         </nav>
+        </header>
+    </div>
+
+    <div class="bgimage">
+            <!--Creating CONTACT US FROM -->
+            <h1 class="heading" style="margin-top: 0px; text-align: center; font-family:'Courier New', Courier, monospace; color: rgb(202, 193, 193);">Contact us Form</h1>
+            <form name="messageForm" onsubmit="validateForm()">
+                <p class="paragraphs">First name: <input style="width:200px;height: 20px;" type="text" name="firstname"></p>
+                <p class="paragraphs">Last name: <input style="width:200px;height: 20px;" type="text" name="lastname"></p>
+                <p class="paragraphs">Email: <input style="width:400px;height: 20px;" type="text" name="email"></p>
+                <p class="paragraphs">Gender: <input type="radio" name="gender" value="male" checked> Male 
+                <input type="radio" name="gender" value="female"> Female </p>
+                <p class="paragraphs">Message: <br><textarea  style="width:500px;" name="message" rows="10" cols="30" placeholder="Enter Message"></textarea></p>
+                <p class="paragraphs"><input class="submit" style="height: 40px; width: 100px;" type="submit" value="Submit"></p>
+            </form>
+            <script>
+                function validateForm() {
+                    var fname = document.forms["messageForm"]["firstname"].value;
+                    var lname = document.forms["messageForm"]["lastname"].value;
+                    var email = document.forms["messageForm"]["email"].value;
+                    var gender = document.forms["messageForm"]["gender"].value;
+                    var message = document.forms["messageForm"]["message"].value;
+    
+                    if (fname == "" || lname == "" || email == "" || message == ""){
+                        alert("There is an empty field. Please fill the form.");
+                    }
+                    else {
+                        alert("Thank you for the message.");
+                    }
+                }
+            </script>
+            <div class="popup" id="popup-1">
+                <div class="overlay"></div>
+                <div class="content">
+                  <div class="close-btn" onclick="togglePopup()">X</div>
+                  <h1>Thank You Message</h1>
+                  <p>Thank you for filling<br> the contact us form..</p>
+                </div>
+              </div>
+               
+              <button style="margin-top: 500px;" onclick="togglePopup()">Thank You</button>
+
+    </div>
+        <!--footer-->
+        <footer class="footer" style="background-color:rgb(20, 16, 16);">
+            <p style="padding: 20px 0px 0px 70px;color: rgb(163, 155, 155); font-family:Arial, Helvetica, sans-serif; font-size: 30px;">About us </br></p>
+            <p style="padding: 0px 0px 0px 70px; font-family:Tahoma;color: rgb(18, 105, 32); font-size: 19px;"> I am the student of Islington college, kathmandu. This website is one of my project given by the college to determine my skill levels in the context of web designing. </p>
+            <p style="padding: 20px 0px 0px 70px;color: rgb(175, 169, 169); font-family:Arial; font-size: 29px;"> Contact </br></p>
+            <p style="padding: 0px 0px 0px 70px;font-family:Tahoma; color: rgb(19, 129, 24); font-size: 19px;"> Email: samin@gmail.com<br> Phone Number: 988789299 </p>
+        
+            </p>
+            <p style="padding: 0px 0px 0px 70px;font-family:Tahoma; color: rgb(40, 129, 12); font-size: 20px;">Samin Basnet© All rights reserved. </p>
+            
+            
+            
+        </footer>
+</body>
+</html>
