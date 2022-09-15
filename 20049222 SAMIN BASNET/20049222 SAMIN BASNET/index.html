@@ -1,0 +1,179 @@
+<!DOCTYPE html>     
+<html>
+<head>
+    <!--defining character set-->
+    <meta charset="urf-8">
+
+    <!--Title of the page-->
+    <title>Home page</title>
+
+    <!--internal css-->
+    <style>
+    *{
+     margin: 0px;
+    }
+
+    .bgimage {
+        background-image: url('images/bgimage.jpg');
+        width: 100%;
+        height: 400px;
+    }
+    
+    .introduction {
+        font-size: 55px;
+        color: rgb(245, 240, 236);
+        padding:100px 300px 0px 300px;
+    }
+    
+    .tables tr th a {
+        color: rgb(156, 152, 149);
+        font-size: 20px;
+         text-decoration: none;
+    }
+    .tables tr th a:hover {
+        color: rgb(221, 23, 23);
+    }
+    
+    .shortIntro img {
+        width:100%;
+         height:395px;
+    }
+    .shortIntro p {
+        font-size: 35px;
+         font-family:
+         cursive; color:rgb(36, 35, 36);
+    }
+    .shortIntro p a {
+        font: size 36px; 
+        color:rgb(24, 18, 10); 
+        text-decoration: none;
+         margin:-30px 0px 0px 0px;
+    }
+    .shortIntro p a:hover {
+        color: rgb(77, 228, 97);
+    }
+   
+    
+    #clock {
+        color: rgb(9, 12, 10);
+        font-size: 30px;
+        padding-left: 99px;
+    }
+
+     </style>
+     <!--externall css-->
+     <link rel="stylesheet" href="css/style.css">
+
+
+    
+</head>
+  
+<body>
+    <!-- Intrduction  -->
+    <div class="intro">
+        <div class="bgimage"  >      
+            <p class="introduction"> My name is Samin Basnet,<br> I am from biratnagar.</p>
+            <p style="padding-left:500px; color: rgb(238, 234, 234); font-family:cursive; font-size: 30px;">Nepal Time:</p>
+            <div id="clock" style="padding-left:500px;"></div>
+             <script type="text/javascript">
+                setInterval(displayclock, 500)
+                function displayclock () {
+                var time = new Date();
+                var hrs = time.getHours();
+                var mins = time.getMinutes();
+                var secs = time.getSeconds();
+                var en = 'AM'
+                if (hrs > 12) {
+                    en= 'PM';
+                }
+                if (hrs > 12) {
+                    hrs= hrs-12;
+                }
+                if (hrs == 0) {
+                    hrs = 12;
+                }
+    
+                
+                document.getElementById("clock").innerHTML = hrs + ':' + mins + ':' + secs + ':' + '' + en;
+                }
+            
+             </script>
+        </div>
+        </div>
+    </div>
+   
+    
+    <!--Navigation bar -->
+    <div style="width:100%; height:160px;">
+        <header style="width:100%;  height:160px;" >
+            <nav class="navbar">
+                <table class="tables">
+                   <tr>
+                   <th >
+                       <a  href="index.html">Home</a>
+                   </th>
+                   <th >
+                       <a href="otherpages/CV.html">CV</a>
+                   </th>
+                   <th >
+                    <a href="otherpages/blogs.html">Blogs</a>
+                    </th>
+                   <th >
+                       <a href="otherpages/research.html">Research</a>
+                   </th>
+                   
+                   <th >
+                       <a href="otherpages/contactus.html">Contact us</a>
+                   </th>
+                   
+                   </tr>
+                </table>
+            </nav> 
+        </header>
+    </div>
+    <!--Creating short introduction of other pages-->
+
+    <main style="background-color:rgb(201, 191, 191); width:100%; height:820px; margin-top: -100px;">
+        <div class="shortIntro" style="margin: 10px 0.5% 5px 1%; "> 
+            <img  src="images/CV.jpg" />
+                <p style="margin-top:-400px; padding-left: 10px;">
+                BLog section <br>includes the information  <br> about the techbology. <br>Also its positive<br> and the negative effects<br>of it.<br>Also the verdict.
+                <a href="otherpages/blogs.html" >-Blogs</a>
+        </div>
+        <div class="shortIntro" style=" margin: 10px 1% 5px 0.5%;  "> 
+            <img src="images/CV.jpg"/>
+                <p style="margin: -400px 0px 0px 30px; padding:60px 50px 0px 50px;">
+                                CV is all about</br>myself and work done by me.</br>It shows my experience and skills</br>in the sector of html,css and javascript.
+                <a href="otherpages/CV.html" >-CV</a>
+                 </p>
+        </div>
+        <div class="shortIntro" style=" margin: 5px 0.5% 10px 1%;  "> 
+            <img src="images/CV.jpg" />
+                <p style="margin:-400px 0px 50px 30px">
+                Research explains </br>the reference taken</br>from the other websites </br>to design the website <br> of mine. <br> 
+                <a href="otherpages/blogs.html" >-Research</a>
+                </p>
+        </div>
+        <div class="shortIntro" style=" margin: 5px 1% 10px 0.5%;  "> 
+            <img src="images/CV.jpg" />
+                 <p style="margin:-400px 0px 50px 30px; padding-top: 50px;">
+                Contact us page simply includes <br> the contact information <br> people can simply contact us through contact us <br>form or provided detail information.
+                <a href="otherpages/blogs.html" >-Contact us</a>
+                </p>
+        </div>
+    </main>
+</body>
+<!--footer-->
+<footer class="footer" style="background-color:rgb(20, 16, 16);">
+    <p style="padding: 20px 0px 0px 70px;color: rgb(163, 155, 155); font-family:Arial, Helvetica, sans-serif; font-size: 30px;">About us </br></p>
+    <p style="padding: 0px 0px 0px 70px; font-family:Tahoma;color: rgb(18, 105, 32); font-size: 19px;"> I am the student of Islington college, kathmandu. This website is one of my project given by the college to determine my skill levels in the context of web designing. </p>
+    <p style="padding: 20px 0px 0px 70px;color: rgb(175, 169, 169); font-family:Arial; font-size: 29px;"> Contact </br></p>
+    <p style="padding: 0px 0px 0px 70px;font-family:Tahoma; color: rgb(19, 129, 24); font-size: 19px;"> Email: samin@gmail.com<br> Phone Number: 988789299 </p>
+
+    </p>
+    <p style="padding: 0px 0px 0px 70px;font-family:Tahoma; color: rgb(40, 129, 12); font-size: 20px;">Samin Basnet© All rights reserved. </p>
+    
+    
+    
+</footer>
+</html>
